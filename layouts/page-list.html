@@ -1,11 +1,11 @@
 <div class="pages-list fade-in">
     <h1><%= data.type %></h1>
-    <% data.pages.forEach(function(page) { %>
+    <% data.page.forEach(function(item) { %>
         <h2>
-            <a href="<%= page.permalink %>"><%= page.title %></a>
+            <a href="<%= item.permalink %>"><%= item.title %></a>
         </h2>
-        <% if(page.excerpt) { %>
-            <p><%= page.excerpt %></p>
+        <% if(item.excerpt) { %>
+            <p><%= item.excerpt %></p>
         <% } %>
     <% }) %>
 </div>

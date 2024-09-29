@@ -1,14 +1,14 @@
 <div class="posts-list fade-in">
-    <% data.hubs.forEach(function(hub) { %>
-        <% if(!hub.draft) { %>
+    <% data.hub.forEach(function(item) { %>
+        <% if(!item.draft) { %>
             <article class="post">
                 <h1 class="post-title">
-                  <a href="<%= hub.permalink %>"><%= hub.title %></a>
+                  <a href="<%= item.permalink %>"><%= item.title %></a>
                 </h1>
-                <time class="post-date"><%= hub.date %></time>
+                <time class="post-date"><%= item.date %></time>
                 <div class="post-content">
-                    <% if(hub.subtitle) { %>
-                        <p><%= hub.subtitle %></p>
+                    <% if(item.subtitle) { %>
+                        <p><%= item.subtitle %></p>
                     <% } %>
                 </div>
             </article>
