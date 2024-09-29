@@ -1,11 +1,17 @@
-<div class="pages-list fade-in">
-    <h1><%= data.type %></h1>
+<div class="posts-list fade-in">
     <% data.page.forEach(function(item) { %>
-        <h2>
-            <a href="<%= item.permalink %>"><%= item.title %></a>
-        </h2>
-        <% if(item.excerpt) { %>
-            <p><%= item.excerpt %></p>
+        <% if(!item.draft) { %>
+            <article class="post">
+                <h1 class="post-title">
+                  <a href="<%= item.permalink %>"><%= item.title %></a>
+                </h1>
+                <div class="post-date"><%= item.date %></div>
+                <div class="post-content">
+                    <% if(item.subtitle) { %>
+                        <p><%= item.subtitle %></p>
+                    <% } %>
+                </div>
+            </article>
         <% } %>
     <% }) %>
 </div>

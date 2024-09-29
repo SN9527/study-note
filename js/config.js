@@ -12,10 +12,9 @@ var config = {
     layoutDirectory: 'layouts',
 
     errorLayout: 'error',
-    defaultView: 'hub',
+    defaultView: 'page',
 
     types: [
-        {name: 'hub', layout: { list: 'hub-list', single: 'hub' }},
         {name: 'page', layout: { list: 'page-list', single: 'page' }},
     ],
 };
