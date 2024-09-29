@@ -24,8 +24,7 @@
         <div class="collapse navbar-collapse" id="navbar_example_1">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span>
-                    </a>
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
@@ -43,9 +42,73 @@
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
             </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="#"><i class="fas fa-cogs"></i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link nav-link-icon" href="#" id="navbar_1_dropdown_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bell"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-xl py-0">
+                        <div class="py-3 px-3">
+                            <h5 class="heading h6 mb-0">Notifications</h5>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                <div class="list-group-img">
+                                    <span class="avatar bg-purple">JD</span>
+                                </div>
+                                <div class="list-group-content">
+                                    <div class="list-group-heading">Johnyy Depp <small>10:05 PM</small></div>
+                                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor</p>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                <div class="list-group-img">
+                                    <span class="avatar bg-pink">TC</span>
+                                </div>
+                                <div class="list-group-content">
+                                    <div class="list-group-heading">Tom Cruise <small>10:05 PM</small></div>
+                                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor</p>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                <div class="list-group-img">
+                                    <span class="avatar bg-blue">WS</span>
+                                </div>
+                                <div class="list-group-content">
+                                    <div class="list-group-heading">Will Smith <small>10:05 PM</small></div>
+                                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="py-3 text-center">
+                            <a href="#" class="link link-sm link--style-3">View all notifications</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link nav-link-icon" href="#" id="navbar_1_dropdown_3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <h6 class="dropdown-header">User menu</h6>
+                        <a class="dropdown-item" href="#">
+                            <span class="float-right badge badge-primary">4</span>
+                            <i class="fas fa-envelope text-primary"></i>Messages
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-cog text-primary"></i>Settings
+                        </a>
+                        <div class="dropdown-divider" role="presentation"></div>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-sign-out-alt text-primary"></i>Sign out
+                        </a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </nav>
-    <div id="cms"></div>
+    <main class="main">    
+        <div id="cms"></div>
+    </main>
     <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.12/es5-shim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-7ymO4nGrkm372HoSbq1OY2DP4pEZnMiA+E0F3zPr+JQQtQ82gQ1HPY3QIVtztVua" crossorigin="anonymous"></script>
