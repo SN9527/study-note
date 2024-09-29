@@ -1,11 +1,7 @@
 <article class="post fade-in">
-    <h1 class="post-title">
-        <%= data.title %>
-    </h1>
+    <h1 class="post-title"><%= data.title %></h1>
     <% if(data.date) { %>
-        <time class="post-date">
-            <span><%= data.date %></span>
-        </time>
+        <div><%= data.date %></div>
     <% } %>
     <div class="post-tags">
         <% if(data.tags) { %>
