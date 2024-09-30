@@ -8,10 +8,17 @@ marked.setOptions({
     smartLists: true,
     smartypants: false,
     highlight: function(code, language) {
+        console.log("highlight" , language)
         const validLanguage = Prism.languages[language] ? language : "js"
         const validCode = Prism.highlight(code, validLanguage);
         return `<pre class="language-${validLanguage}"><code>${validCode}</code></pre>`
-    }    
+    } ,
+    code: function(code, language) {
+        console.log("code" , language)
+        const validLanguage = Prism.languages[language] ? language : "js"
+        const validCode = Prism.highlight(code, validLanguage);
+        return `<pre class="language-${validLanguage}"><code>${validCode}</code></pre>`
+    }        
 });
 
 function myPlugin() {
