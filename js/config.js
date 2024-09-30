@@ -8,8 +8,8 @@ marked.setOptions({
     smartLists: true,
     smartypants: false,
     highlight: function(code, language) {
-        const validLanguage = highlight.getLanguage(language) ? language : 'plaintext';
-        return highlight.highlight(validLanguage, code).value;
+        const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
+        return hljs.highlight(validLanguage, code).value;
     }    
 });
 
