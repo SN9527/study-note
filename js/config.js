@@ -1,5 +1,13 @@
+var renderer = new marked.Renderer()
+renderer.code: function(code, language) {
+    console.log("renderer.code")
+    const validLanguage = Prism.languages[language] ? language : "js"
+    const validCode = Prism.highlight(code, validLanguage);
+    return `<pre class="language-${validLanguage}"><code>${validCode}</code></pre>`
+}        
+
 marked.setOptions({
-    renderer: new marked.Renderer(),
+    renderer: renderer,
     gfm: true,
     tables: true,
     breaks: false,
@@ -7,18 +15,6 @@ marked.setOptions({
     sanitize: true,
     smartLists: true,
     smartypants: false,
-    highlight: function(code, language) {
-        console.log("highlight" , language)
-        const validLanguage = Prism.languages[language] ? language : "js"
-        const validCode = Prism.highlight(code, validLanguage);
-        return `<pre class="language-${validLanguage}"><code>${validCode}</code></pre>`
-    } ,
-    code: function(code, language) {
-        console.log("code" , language)
-        const validLanguage = Prism.languages[language] ? language : "js"
-        const validCode = Prism.highlight(code, validLanguage);
-        return `<pre class="language-${validLanguage}"><code>${validCode}</code></pre>`
-    }        
 });
 
 function myPlugin() {
