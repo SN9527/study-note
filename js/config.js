@@ -36,7 +36,7 @@ var config = {
     plugins: [
         myPlugin,
     ],
-    markdownEngine: marked,
+    markdownEngine: marked.parse,
 
     onload: function() {
         console.log('cms.js ready');
