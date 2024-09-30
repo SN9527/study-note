@@ -2,6 +2,7 @@ var renderer = new marked.Renderer()
 renderer.code = function(code, language) {
     console.log("renderer.code")
     const validLanguage = Prism.languages[language] ? language : "js"
+    return Prism.highlight(code, validLanguage).value;
     const validCode = Prism.highlight(code, validLanguage);
     return `<pre class="language-${validLanguage}"><code>${validCode}</code></pre>`
 }        
