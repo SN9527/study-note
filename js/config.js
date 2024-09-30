@@ -6,7 +6,11 @@ marked.setOptions({
     pedantic: false,
     sanitize: true,
     smartLists: true,
-    smartypants: false
+    smartypants: false,
+    highlight: function(code, language) {
+        const validLanguage = highlight.getLanguage(language) ? language : 'plaintext';
+        return highlight.highlight(validLanguage, code).value;
+    }    
 });
 
 function myPlugin() {
@@ -41,18 +45,18 @@ var config = {
     onload: function() {
         console.log('cms.js ready');
 
-        document.getElementById('sort').addEventListener('click', function() {
-            var sortFunc = function(a, b) {
-                if(a.title.toLowerCase() < b.title.toLowerCase()) return -1;
-                if(a.title.toLowerCase() > b.title.toLowerCase()) return 1;
-                return 0;
-            }
-            blog.sort('posts', sortFunc);
-        });
+        // document.getElementById('sort').addEventListener('click', function() {
+        //     var sortFunc = function(a, b) {
+        //         if(a.title.toLowerCase() < b.title.toLowerCase()) return -1;
+        //         if(a.title.toLowerCase() > b.title.toLowerCase()) return 1;
+        //         return 0;
+        //     }
+        //     blog.sort('posts', sortFunc);
+        // });
 
-        document.getElementById('search').addEventListener('input', function(e) {
-            blog.search('posts', 'title', e.target.value);
-        });
+        // document.getElementById('search').addEventListener('input', function(e) {
+        //     blog.search('posts', 'title', e.target.value);
+        // });
 
         // Access the loaded plugins like this.
         // blog.myPlugin();
