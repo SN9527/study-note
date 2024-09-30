@@ -1,5 +1,5 @@
 var renderer = new marked.Renderer()
-renderer.code: function(code, language) {
+renderer.code = function(code, language) {
     console.log("renderer.code")
     const validLanguage = Prism.languages[language] ? language : "js"
     const validCode = Prism.highlight(code, validLanguage);
