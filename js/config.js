@@ -8,8 +8,9 @@ marked.setOptions({
     smartLists: true,
     smartypants: false,
     highlight: function(code, language) {
-        const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
-        return hljs.highlight(validLanguage, code).value;
+        const validLanguage = Prism.languages[language] ? language : "js"
+        const validCode = Prism.highlight(code, validLanguage);
+        return `<pre class="language-${validLanguage}"><code>${validCode}</code></pre>`
     }    
 });
 
